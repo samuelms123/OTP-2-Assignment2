@@ -1,11 +1,6 @@
 pipeline {
     agent any
     environment {
-        SALT_ROUNDS = '7'
-        JWT_SECRET = credentials('secret-secret')
-
-        PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
-
         // Define Docker Hub credentials ID
         DOCKERHUB_CREDENTIALS_ID = 'docker_hub'
         // Define Docker Hub repository name
@@ -19,30 +14,6 @@ pipeline {
                 git branch:'main', url:'https://github.com/samuelms123/OTP-2-Assignment2.git'
             }
         }
-        stage('Create .env file') {
-            steps {
-                powershell '''
-                    Write-Output "Creating .env file..."
-                    "SALT_ROUNDS=$env:SALT_ROUNDS" | Out-File -FilePath .env -Encoding ASCII
-                    "JWT_SECRET=$env:JWT_SECRET" | Out-File -FilePath .env -Encoding ASCII -Append
-                    Get-Content .env
-                '''
-            }
-        }
-        stage('Verify .env') {
-            steps {
-                bat '''
-                    echo Checking if .env file exists...
-                    if exist .env (
-                        echo .env file found!
-                        type .env
-                    ) else (
-                        echo .env file NOT found!
-                    )
-                '''
-            }
-        }
-
         stage('Build and Test') {
             steps {
                 bat 'mvn clean install'
