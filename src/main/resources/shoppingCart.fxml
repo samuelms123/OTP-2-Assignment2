@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ShoppingCartController">
+   <children>
+      <Label fx:id="selectLanguage" layoutX="436.0" layoutY="6.0" text="%selectLanguage" />
+      <ComboBox fx:id="languageOptions" layoutX="436.0" layoutY="22.0" onAction="#changeLanguage" prefWidth="150.0" promptText="%languageName" />
+      <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%title">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ListView fx:id="itemList" layoutX="14.0" layoutY="56.0" prefHeight="331.0" prefWidth="200.0" />
+      <Label fx:id="totalCost" layoutX="224.0" layoutY="56.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Text fx:id="totalCostValue" layoutX="318.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameField" layoutX="224.0" layoutY="188.0" prefHeight="25.0" prefWidth="364.0" />
+      <Text fx:id="itemName" layoutX="224.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%name" />
+      <TextField fx:id="quantityField" layoutX="224.0" layoutY="249.0" prefHeight="25.0" prefWidth="364.0" />
+      <Text layoutX="224.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%quantity" />
+      <TextField fx:id="priceField" layoutX="224.0" layoutY="307.0" prefHeight="25.0" prefWidth="364.0" />
+      <Text layoutX="227.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%price" />
+      <Button fx:id="addButton" layoutX="224.0" layoutY="361.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="364.0" text="%addItem" />
+      <Text fx:id="symbol" layoutX="349.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%symbol">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="224.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%totalAmount" />
+      <Text fx:id="errorText" layoutX="224.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%errorText" visible="false" />
+   </children>
+</Pane>
