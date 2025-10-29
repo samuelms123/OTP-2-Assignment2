@@ -12,6 +12,7 @@ pipeline {
         DOCKERHUB_REPO = 'samuelms123/class-assignment2'
         // Define Docker image tag
         DOCKER_IMAGE_TAG = 'latest'
+        }
     }
     stages {
         stage('Checkout') {
@@ -81,5 +82,4 @@ pipeline {
                 powershell 'Remove-Item .env -Force -ErrorAction SilentlyContinue'
             }
         }
-
     }
