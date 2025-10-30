@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 public class GUI extends Application {
     Stage stage;
     public void start(Stage stage) throws Exception {
-        stage.setTitle("Shopping Cart");
+        stage.setTitle("Shopping Cart / SAMUEL SARIMO");
         this.stage = stage;
         stage.setResizable(false);
         Locale locale = new Locale("en", "US");
