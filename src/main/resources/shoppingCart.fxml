@@ -36,7 +36,7 @@
       <TextField fx:id="priceField" layoutX="224.0" layoutY="307.0" prefHeight="25.0" prefWidth="364.0" />
       <Text layoutX="227.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%price" />
       <Button fx:id="addButton" layoutX="224.0" layoutY="361.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="364.0" text="%addItem" />
-      <Text fx:id="symbol" layoutX="336.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%symbol">
+      <Text fx:id="symbol" layoutX="349.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%symbol">
          <font>
             <Font size="14.0" />
          </font>
